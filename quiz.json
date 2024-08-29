@@ -1,0 +1,21 @@
+{
+    "title": "Simpele Quiz applicatie",
+    "description": "Test jouw knowledge met deze simpele quiz!",
+    "questions": [
+        {
+            "question": "Wat is de hoofdstad van frankrijk?",
+            "choices": ["Berlijn", "Londen", "Parijs", "Madrid"],
+            "answer": "Parijs"
+        },
+        {
+            "question": "welke taal is het meest primair gebruik voor web development?",
+            "choices": ["Python", "JavaScript", "C++", "Java"],
+            "answer": "JavaScript"
+        },
+        {
+            "question": "Wie schreef 'To Kill a Mockingbird'?",
+            "choices": ["Harper Lee", "J.K. Rowling", "F. Scott Fitzgerald", "Ernest Hemingway"],
+            "answer": "Harper Lee"
+        }
+    ]
+}

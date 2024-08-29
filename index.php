@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>halloo</p>
-</body>
+<?php 
+    require_once('head.php');
+?>
+    <body>
+        <?php
+            //require_once('header.php');
+        ?>
+        <div class="welcome-container">
+            <h1>Welkom bij mijn super duper Quiz App!</h1>
+            <p>Ben je er klaar voor om jouw knowledge te testen? Klik dan op de knop hieronder.</p>
+            <a href="vragenlijst.php" class="start-button">Start Quiz</a>
+        </div>
+    </body>
 </html>

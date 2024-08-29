@@ -1,0 +1,65 @@
+/* Algemene stijl voor de hele pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container voor de welkomsttekst */
+.welcome-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px;
+}
+
+/* Stijl voor de hoofdtitel */
+.welcome-container h1 {
+    font-size: 2.5em;
+    color: #1e90ff;
+    margin-bottom: 20px;
+}
+
+/* Stijl voor de paragraaftekst */
+.welcome-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Stijl voor de startknop */
+.start-button {
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #1e90ff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover-effect voor de startknop */
+.start-button:hover {
+    background-color: #104e8b;
+}
+.vragenlijst-container h1, h2 {
+    color: #333;
+}
+.question {
+    margin-bottom: 20px;
+    color: blue;
+}
+.choices {
+    list-style-type: none;
+    padding: 0;
+}
+.choices li {
+    margin: 5px 0;
+}

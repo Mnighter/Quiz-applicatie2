@@ -29,14 +29,26 @@ $questions = $quiz['questions'];
 				<div class="question">
 					<h2><?php echo ($index + 1) . '. ' . $question['question']; ?></h2>
 					<ul class="choices">
-						<?php foreach ($question['choices'] as $choice) : ?>
-							<li>
-								<label>
-									<input type="radio" name="question-<?php echo $index; ?>" value="<?php echo $choice; ?>" required>
-									<?php echo $choice; ?>
-								</label>
-							</li>
-						<?php endforeach; ?>
+						<?php if (isset($question['choices'])) : ?>		
+							<?php foreach ($question['choices'] as $choice) : ?>
+								<li>
+									<label>
+										<input type="radio" name="question-<?php echo $index; ?>" value="<?php echo $choice; ?>" required>
+										<?php echo $choice; ?>
+									</label>
+								</li>
+							<?php endforeach; ?>
+
+						<?php elseif (isset($question['placeholder'])) : ?>
+								<li>
+									<label>
+										<textarea
+											name="question-<?php echo $index; ?>"
+											value="<?php echo $question['placeholder']; ?>" required>
+										</textarea>
+									</label>
+								</li>
+						<?php endif ?>
 					</ul>
 				</div>
 			<?php endforeach; ?>

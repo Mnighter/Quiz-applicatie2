@@ -16,6 +16,11 @@
             "question": "Wie schreef 'To Kill a Mockingbird'?",
             "choices": ["Harper Lee", "J.K. Rowling", "F. Scott Fitzgerald", "Ernest Hemingway"],
             "answer": "Harper Lee"
+        },
+        {
+            "question": "Wat is de hoofdstad van Turkije?",
+            "placeholder": "Schrijf je antwoord hier...",
+            "answer": "Ankara"
         }
     ]
 }

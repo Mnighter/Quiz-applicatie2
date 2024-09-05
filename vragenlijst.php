@@ -1,17 +1,17 @@
 <?php
-// Laad de quizgegevens vanuit het JSON-bestand
-$jsonData = file_get_contents('quiz.json');
-$quiz = json_decode($jsonData, true);
+require_once 'backend/conn.php'; // Verbind met de database
 
-// Controleer of de gegevens correct zijn geladen
-if (!$quiz) {
+// Haal alle quizvragen uit de database
+$query = $conn->query("SELECT * FROM questions");
+$questions = $query->fetchAll(PDO::FETCH_ASSOC);
+
+// Controleer of de vragen zijn geladen
+if (!$questions) {
     die('Error loading quiz data');
 }
 
-// Variabelen voor de titel en beschrijving van de quiz
-$title = $quiz['title'];
-$description = $quiz['description'];
-$questions = $quiz['questions'];
+$title = "Simpele Quiz applicatie";
+$description = "Test jouw knowledge met deze simpele quiz!";
 ?>
 
 <!DOCTYPE html>
@@ -29,8 +29,9 @@ $questions = $quiz['questions'];
 				<div class="question">
 					<h2><?php echo ($index + 1) . '. ' . $question['question']; ?></h2>
 					<ul class="choices">
-						<?php if (isset($question['choices'])) : ?>		
-							<?php foreach ($question['choices'] as $choice) : ?>
+						<?php if ($question['type'] == 'multiple-choice') : 
+							$choices = json_decode($question['choices'], true);
+							foreach ($choices as $choice) : ?>
 								<li>
 									<label>
 										<input type="radio" name="question-<?php echo $index; ?>" value="<?php echo $choice; ?>" required>
@@ -39,20 +40,17 @@ $questions = $quiz['questions'];
 								</li>
 							<?php endforeach; ?>
 
-						<?php elseif (isset($question['placeholder'])) : ?>
+						<?php elseif ($question['type'] == 'open') : ?>
 								<li>
 									<label>
-										<textarea
-											name="question-<?php echo $index; ?>"
-											value="<?php echo $question['placeholder']; ?>" required>
-										</textarea>
+										<textarea name="question-<?php echo $index; ?>" placeholder="Schrijf je antwoord hier..." required></textarea>
 									</label>
 								</li>
 						<?php endif ?>
 					</ul>
 				</div>
 			<?php endforeach; ?>
-			<input type="submit" value="verzend Quiz">
+			<input type="submit" value="Verzend Quiz">
 		</form>
 	</div>
 </body>

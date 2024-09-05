@@ -13,6 +13,7 @@
         </div>
         
         <a href="vragenlijst.php" class="start-button">Start Quiz</a>
+        <a href="json/add_question.php">vraag toevoegen</a>
     </div>
 </body>
 </html>

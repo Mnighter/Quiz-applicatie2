@@ -1,9 +1,11 @@
 <?php
-// Stap 1: Verbind met de database
+// Import-script: Importeert de gegevens uit quiz.json naar de database.
+
 require_once 'backend/conn.php'; // Verbind met de database via PDO
 
-// Stap 2: Lees de JSON-file
-$jsonData = file_get_contents('quiz.json');
+// Laad de JSON-file
+$jsonFile = 'quiz.json'; // Pad naar JSON-bestand in de map json
+$jsonData = file_get_contents($jsonFile);
 $quiz = json_decode($jsonData, true);
 
 // Controleer of de JSON correct is geladen
@@ -11,18 +13,14 @@ if (!$quiz) {
     die("Error bij het laden van quiz.json");
 }
 
-// Stap 3: Prepareer de SQL-query voor het invoegen van vragen
+// Prepareer de SQL-query voor het invoegen van vragen
 $stmt = $conn->prepare("INSERT INTO questions (question, choices, answer, type) VALUES (:question, :choices, :answer, :type)");
 
-// Stap 4: Loop door elke vraag en voer de invoegopdracht uit
+// Loop door elke vraag en voer de invoegopdracht uit
 foreach ($quiz['questions'] as $question) {
-    // Bepaal het type vraag (meerkeuze of open vraag)
     $type = isset($question['choices']) ? 'multiple-choice' : 'open';
+    $choices = isset($question['choices']) ? json_encode($question['choices']) : json_encode([]);
 
-    // Zet de keuzes om naar JSON als het een meerkeuzevraag is, anders null
-    $choices = isset($question['choices']) ? json_encode($question['choices']) : null;
-
-    // Bind parameters en voer de query uit
     $stmt->bindParam(':question', $question['question']);
     $stmt->bindParam(':choices', $choices);
     $stmt->bindParam(':answer', $question['answer']);
@@ -31,6 +29,5 @@ foreach ($quiz['questions'] as $question) {
     $stmt->execute();
 }
 
-// Bevestiging
 echo "Vragen succesvol geïmporteerd naar de database!";
 ?>

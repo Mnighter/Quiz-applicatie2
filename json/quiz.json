@@ -4,23 +4,60 @@
     "questions": [
         {
             "question": "Wat is de hoofdstad van frankrijk?",
-            "choices": ["Berlijn", "Londen", "Parijs", "Madrid"],
+            "choices": [
+                "Berlijn",
+                "Londen",
+                "Parijs",
+                "Madrid"
+            ],
             "answer": "Parijs"
         },
         {
             "question": "welke taal is het meest primair gebruik voor web development?",
-            "choices": ["Python", "JavaScript", "C++", "Java"],
+            "choices": [
+                "Python",
+                "JavaScript",
+                "C++",
+                "Java"
+            ],
             "answer": "JavaScript"
         },
         {
             "question": "Wie schreef 'To Kill a Mockingbird'?",
-            "choices": ["Harper Lee", "J.K. Rowling", "F. Scott Fitzgerald", "Ernest Hemingway"],
+            "choices": [
+                "Harper Lee",
+                "J.K. Rowling",
+                "F. Scott Fitzgerald",
+                "Ernest Hemingway"
+            ],
             "answer": "Harper Lee"
         },
         {
             "question": "Wat is de hoofdstad van Turkije?",
             "placeholder": "Schrijf je antwoord hier...",
             "answer": "Ankara"
+        },
+        {
+            "question": "wat is 2+2?",
+            "choices": [
+                "3",
+                "1",
+                "4",
+                "2"
+            ],
+            "answer": "4",
+            "placeholder": null
+        },
+        {
+            "question": "wat is 2+2?",
+            "choices": [
+                "3",
+                "1",
+                "4",
+                "2"
+            ],
+            "answer": "4",
+            "placeholder": null
         }
     ]
 }

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    require_once('../head.php');
+    require_once('../head.php'); // Zorg ervoor dat het pad correct is
 ?>
 <body>
-<!-- Formulier: Hiermee kun je nieuwe vragen toevoegen via een webinterface. -->
     <h1>Voeg een Vraag Toe</h1>
-    <form method="post" action="process_question.php">
+    <form method="post" action="../backend/questionAddController.php">
         <label for="question">Vraag:</label>
         <input type="text" id="question" name="question" required><br><br>
 
@@ -26,5 +25,3 @@
     </form>
 </body>
 </html>
-
-

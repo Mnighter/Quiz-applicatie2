@@ -58,6 +58,46 @@
             ],
             "answer": "4",
             "placeholder": null
+        },
+        {
+            "question": "hoeveel continents zijn er?",
+            "choices": [
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "answer": "7",
+            "placeholder": null
+        },
+        {
+            "question": "wat is 5+5?",
+            "choices": [
+                "2",
+                "4",
+                "8",
+                "10"
+            ],
+            "answer": "10",
+            "placeholder": null
+        },
+        {
+            "question": "wat is lekker",
+            "choices": [
+                "kip",
+                "varken",
+                "speculaas",
+                "baklava"
+            ],
+            "answer": "kip",
+            "placeholder": null
+        },
+        {
+            "question": "waar staat de p in php voor?",
+            "choices": null,
+            "answer": "php",
+            "placeholder": "Schrijf je antwoord hier..."
         }
     ]
 }

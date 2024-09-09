@@ -98,6 +98,27 @@
             "choices": null,
             "answer": "php",
             "placeholder": "Schrijf je antwoord hier..."
+        },
+        {
+            "question": "Wat is de doorsnede van een basketbal",
+            "choices": [
+                "35 cm",
+                "45 cm",
+                "55 cm"
+            ],
+            "answer": "45 cm",
+            "placeholder": null
+        },
+        {
+            "question": "wat is haram",
+            "choices": [
+                "varken",
+                " ezel",
+                " koe",
+                " kip"
+            ],
+            "answer": "varken",
+            "placeholder": null
         }
     ]
 }

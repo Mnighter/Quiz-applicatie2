@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    require_once('head.php');
-?>
-<?php 
-    require_once('header.php');
+    require_once('header.php'); // Zorg ervoor dat de header wordt geladen
 ?>
 <body>
-    <div class="docent-container">
-        <h1>Welkom docent</h1>
-        <nav>
-            <ul>
-                <li><a href="json/add_question.php">Vraag toevoegen</a></li>
-                <li><a href="json/delete_question.php">Vraag verwijderen</a></li>
-            </ul>
-        </nav>
-    </div>
+    <h1>Welkom docent</h1>
+    <nav>
+        <a href="json/add_question.php">Vraag toevoegen</a>
+        <a href="json/delete_question.php">Vraag verwijderen</a>
+    </nav>
 </body>
 </html>

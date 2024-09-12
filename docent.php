@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    require_once('header.php'); // Zorg ervoor dat de header wordt geladen
+    require_once('header.php'); 
 ?>
 <body>
     <h1>Welkom docent</h1>

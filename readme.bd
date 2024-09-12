@@ -1,0 +1,29 @@
+1. Bestandsnamen:
+Gebruik lowercase met underscores (_) voor bestandsnamen.
+Voorbeeld: question_controller.php, conn.php.
+
+2. Variabelen en functies:
+Gebruik camelCase voor variabelen en functienamen.
+Voorbeeld: $userAnswer, addQuestion().
+
+3. Haakjes en gebruik van spaties bij control statements:
+Gebruik een spatie voor haakjes en haakjes openen op dezelfde regel.
+Voorbeeld:
+php
+
+if ($condition) {
+    // code
+}
+
+4. Database Queries:
+Gebruik prepared statements om SQL-injecties te voorkomen.
+Voorbeeld:
+php
+$quizSQL = $conn->prepare("SELECT * FROM questions WHERE id = :id");
+
+5. HTML/PHP Mixed Files:
+Scheid logica (PHP) en presentatie (HTML/CSS) zoveel mogelijk.
+Gebruik htmlspecialchars() om XSS-aanvallen te voorkomen.
+Deze conventies helpen bij de leesbaarheid, onderhoudbaarheid en veiligheid van de code.
+
+6.

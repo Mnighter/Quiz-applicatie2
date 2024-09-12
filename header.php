@@ -1,4 +1,3 @@
-<!-- header.php -->
 <header>
     <nav>
         <ul>

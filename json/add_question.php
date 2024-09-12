@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    require_once('../head.php'); // Zorg ervoor dat het pad correct is
+    require_once('../head.php'); 
 ?>
 <body>
     <div class="add-question-container">

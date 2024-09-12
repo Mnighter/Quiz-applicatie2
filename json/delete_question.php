@@ -4,7 +4,6 @@
         require_once('../head.php'); 
         require_once('../backend/conn.php');
         
-        // Haal alle vragen op uit de database
         $query = $conn->query("SELECT * FROM questions");
         $questions = $query->fetchAll(PDO::FETCH_ASSOC);
     ?>

@@ -119,6 +119,23 @@
             ],
             "answer": "varken",
             "placeholder": null
+        },
+        {
+            "question": "wie is een meid",
+            "choices": [
+                "dylano",
+                " mees",
+                " selina",
+                " patryk"
+            ],
+            "answer": "patryk",
+            "placeholder": null
+        },
+        {
+            "question": "hoeveel karaat is 100 procent goud",
+            "choices": null,
+            "answer": "24",
+            "placeholder": "Schrijf je antwoord hier..."
         }
     ]
 }
